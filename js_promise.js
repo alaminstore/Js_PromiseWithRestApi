@@ -1,3 +1,19 @@
+//------------Basic concept of promise in javascript(How to works and implements)
+let myFirstPromise = new Promise((resolve, reject) => {
+  let name = "Sm Al-Amin";
+  resolve(name, dept, dream);
+});
+myFirstPromise // it's called promise
+  .then((name, dept, dream) => {
+    console.log("My name is " + name);
+  });
+//Output:
+//My name is Sm Al-Amin
+
+
+//---------------Start from here
+
+
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((Response) => Response.json())
   .then((body) => {
@@ -13,4 +29,6 @@ fetch("https://jsonplaceholder.typicode.com/users")
       document.getElementById("mylist").appendChild(li);
     });
   })
-  .catch((error) => {});
+  .catch((error) => {
+     console.log(error);
+});
